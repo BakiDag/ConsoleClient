@@ -43,18 +43,14 @@ namespace NetCoreWebApi.Controllers
 			return Ok(PersonsList);
 		}
 
-		[HttpPost]
+		[HttpPost("Post")]
 		public IActionResult Post([FromBody] Person person) {
 			//Add in Array/List/Database
-			List<Person> PersonsList = new List<Person>();
-			PersonsList.Add(new Person() {
-				Id = person.Id,
-				Name = person.Name,
-				Vorname = person.Vorname
-
-			});
-
-			return Ok(PersonsList);
+			Person postPerson = new Person();
+			postPerson.Id = person.Id;
+			postPerson.Name = person.Name;
+			postPerson.Vorname = person.Vorname;
+			return Ok(postPerson);
 		}
 
 		[HttpPut]

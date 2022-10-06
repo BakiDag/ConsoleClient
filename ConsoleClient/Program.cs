@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -70,6 +71,7 @@ namespace ConsoleClient
 		}
 
 		public static void Post() {
+			
 			person.Id = "25";
 			person.Name = "John";
 			person.Vorname = "Doe";
@@ -80,7 +82,7 @@ namespace ConsoleClient
 					+ ", Vorname: " +
 					person.Vorname);
 			Console.WriteLine();
-			HttpResponseMessage response = client.PostAsJsonAsync("api/Persons", person).Result;
+			HttpResponseMessage response = client.PostAsJsonAsync("api/Persons/Post", person).Result;
 			if (response.IsSuccessStatusCode) {
 				string returnedContent = response.Content.ReadAsStringAsync().Result;
 				Console.WriteLine("Person added: " + returnedContent);
