@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\bd\Desktop\merging repos\ConsoleClient\NetCoreWebApi\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\bd\Desktop\merging repos\ConsoleClient\NetCoreWebApi\.editorconfig" />
+  </ItemGroup>
+
+
+</Project>
